@@ -1,0 +1,451 @@
+/* =============================================================================
+HTML5 CSS Reset Minified - Eric Meyer
+========================================================================== */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+*{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/* @file main.css
+ * @brief Main styles for the TartanHacks 2015 website.
+ * @author Oscar Bezi, oscar@bezi.io
+ * @since 23 November 2014
+ */
+html,body {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    background: #bd2c39;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+body > div {
+    padding: 3rem 0;
+    width: 100%;
+}
+body > *:nth-child(even) {
+    background: white;
+    color: #bd2c39;
+}
+
+h1, h2 {
+    font-variant: small-caps;
+    font-family: Roboto Slab, serif;
+}
+
+hr {
+    margin: 2rem auto;
+    width: 50%;
+}
+
+@media (min-width: 500px) {
+    hr {
+        width: 250px;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+p {
+    margin: 1rem 5%;
+    line-height: 1.25rem;
+}
+
+@media (min-width: 600px) {
+    p {
+        margin: 1rem auto;
+        width: 600px;
+    }
+}
+
+body > *:nth-child(even) a {
+    color: #bd2c39;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+table {
+    margin: auto;
+    border: 1px solid white;
+}
+
+thead {
+    background: white;
+    color: #bd2c39;
+}
+
+tr {
+    border-collapse: collapse;
+    line-height: 2em;
+    border: solid white 1px;
+}
+
+td {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+
+body > div:nth-child(even) thead {
+    background: #bd2c39;
+    color: white;
+}
+
+body > div:nth-child(even) tr {
+    border: solid #bd2c39 1px;
+}
+
+
+@media (min-width: 400px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* splash page */
+#content {
+    position: relative;
+}
+
+#splash-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #bd2c39;
+}
+
+#splash-info {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+#splash-info > * {
+    margin: 0 auto 1rem auto;
+}
+
+#splash-info > h1 {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+/* remove canvas default margin */
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
+
+.logo {
+    background: #bd2c39;
+    display: block;
+    margin: 2rem auto;
+    width: 90%;
+}
+
+@media (min-width: 400px) {
+    .logo {
+        width: 400px;
+    }
+}
+
+/* forms */
+fieldset {
+    margin: 1rem auto;
+}
+
+fieldset > label {
+    font-style: italic;
+}
+
+select, textarea, input[type=text], input[type=email], input[type=url], input[type=number] {
+    width: 100%;
+    display: block;
+    margin: 0.25rem 0 1rem 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    color: #bd2c39;
+}
+
+textarea {
+    /* override height from general style */
+    height: auto;
+}
+
+input[type=checkbox] {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+input[type=radio] {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+input[type=submit], button {
+    margin: 1rem auto;
+    color: inherit;
+    background: inherit;
+    font-family: inherit;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+body > div:nth-child(even) input[type=submit], button {
+    border: 2px solid #bd2c39;
+}
+
+form {
+    margin: 1rem 0;
+    text-align: left;
+    padding: 0 5%;
+}
+
+@media (min-width: 400px) {
+    select, textarea, input[type=text], input[type=email], input[type=url], input[type=number] {
+        width: 400px;
+    }
+
+    form {
+        padding: 0;
+        width: 400px;
+        margin: 1rem auto;
+    }
+}
+
+/* navbar */
+#navbar {
+    position: relative;
+    padding: 0.75rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+    height: 2rem;
+    overflow: hidden;
+}
+
+#navbar.active {
+    height: auto;
+    background: white;
+    color: #bd2c39;
+}
+
+#navbar.active hr {
+    margin: 0.25rem auto;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #bd2c39;
+}
+
+.brand {
+    color: white;
+    padding: 0;
+    margin: 0 auto;
+    font-family: Roboto Slab, serif;
+    font-variant: small-caps;
+}
+
+#navbar.active .brand {
+    color: #bd2c39;
+}
+
+.toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 80%;
+    width: auto;
+}
+
+@media (min-width: 850px) {
+    .toggle {
+        display: none;
+    }
+
+    #navbar {
+        height: auto;
+        background: white;
+        color: #bd2c39;
+    }
+
+    #navbar li {
+       display: inline-block;
+       padding: 0 1rem;
+    }
+
+    #navbar hr {
+        display: none;
+    }
+
+    .brand {
+        margin: 0 2rem 0 0;
+        width: auto;
+        text-align: left;
+        padding: 0;
+        color: #bd2c39;
+    }
+}
+
+#navbar.active .toggle {
+    display: none;
+}
+
+/* faq */
+.question:nth-child(2) {
+    padding: 2em 0 0 0;
+}
+
+.question {
+    font-size: 1.25rem;
+}
+
+.answer {
+    padding: 1rem 0 0 0;
+    font-family: Roboto Slab, serif;
+}
+
+/* schedule */
+@media (min-width: 750px) {
+    .schedule-holder {
+        width: 40%;
+        display: inline-block;
+        margin: 0 1rem;
+    }
+}
+
+/* announcements */
+.announcement {
+    text-align: left;
+    margin: 1rem auto;
+    height: 100px;
+    width: 90%;
+    padding: 0;
+    background: white;
+    color: #bd2c39;
+}
+
+body > div:nth-child(even) .announcement {
+    background: #bd2c39;
+    color: white;
+}
+
+.announcement > img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    float: left;
+}
+
+.announcement > p {
+    margin-left: 100px;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.announcement > .timestamp {
+    opacity: 0.8;
+    font-size: 0.75em;
+}
+
+@media (min-width: 400px) {
+    .announcement {
+        width: 70%;
+        margin: 1rem auto;
+    }
+}
+
+footer {
+    font-size: 0.75rem;
+    padding: 0.125rem 0;
+}
+
+/* googleSignIn should not be visible, it is an invisible div to trigger the
+ * google API.  !important because the GAPI tries to render it */
+#googleSignIn {
+    display: none !important;
+}
+
+.sponsor-logos {
+    list-style: none;
+    margin: 50px 0;
+}
+
+.sponsor-logos li {
+    display: inline;
+    padding-right: 1em;
+}
+
+.gold img {
+    height: 150px;
+}
+
+.silver img {
+    height: 125px;
+}
+
+.bronze img {
+    height: 100px;
+}
+
+.fafsla img {
+    height: 50px;
+}
+
+@media (max-width: 550px) {
+    .sponsor-logos img {
+        width: 80%;
+    }
+
+    .gold img {
+        height: auto;
+    }
+
+    .silver img {
+        height: auto;
+    }
+
+    .bronze img {
+        height: auto;
+    }
+
+    .fafsla img {
+        height: auto;
+    }
+}
+
