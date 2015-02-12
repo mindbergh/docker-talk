@@ -34,5 +34,6 @@ models.init config, () ->
             console.log "[3/4] Authentication module successfully initalised."
             routes.init app, models, auth, config, () ->
                 console.log "[4/4] Router logic successfully initialised."
+                console.log "Hello everyone at the CCLub talk!"
                 app.listen config.port
                 complete()
