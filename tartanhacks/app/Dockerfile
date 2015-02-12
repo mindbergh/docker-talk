@@ -19,9 +19,5 @@ RUN npm install -g nodemon
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
-ADD package.json /opt/app
+COPY . /opt/app
 RUN npm install
-
-# Links in the node_modules directory right before running
-# @TODO: use a script?  Clean this up?  Leave as is?
-CMD if [ -d /opt/app/node_modules ]; then rm -rf /opt/app/node_modules; fi; ln -s /tmp/app/node_modules /opt/app/node_modules; nodemon server.coffee;
